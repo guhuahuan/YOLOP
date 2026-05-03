@@ -31,7 +31,7 @@ jobs:
           
           mlmodel = ct.convert(
               onnx_model,
-              source='onnx',
+              # 刪除 source='onnx'
               minimum_deployment_target=ct.target.iOS15,
               inputs=[ct.ImageType(name="input", 
                                    shape=(1, 3, 640, 640), 
